@@ -15,130 +15,154 @@ const AboutPage = () => {
   return (
     <section className='overflow-hidden bg-white pb-16 pt-24 sm:pb-24 sm:pt-32'>
       <Container>
+        {/* Header Section */}
         <motion.header 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className='mb-20 text-center px-4'
         >
-          <span className='inline-block rounded-full bg-blue-100 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 shadow-sm'>
-            Our Philosophy
+          <span className='inline-block rounded-full bg-slate-900 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm border-b-2 border-red-600'>
+            ⭐ About Doc2Deutsch
           </span>
           <h1 className='mt-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl'>
-            Beyond Conjugations: <span className="text-blue-600">Clinical Mastery</span>
+            Beyond Conjugations: <span className="text-red-600">Clinical Mastery</span>
           </h1>
           <p className='mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600'>
-            General German helps you survive in Germany. Doc2Deutsch helps you <span className="font-semibold text-slate-900">thrive in a German hospital.</span>
+            Doc2Deutsch is a specialized platform created <span className="font-bold text-slate-900">exclusively for doctors</span> preparing for a medical career in Germany.
           </p>
         </motion.header>
 
+        {/* Why We Exist Section */}
         <div className='grid gap-16 lg:grid-cols-2 lg:items-center px-4'>
           <motion.div {...fadeIn} className="relative">
-            <div className="absolute -inset-4 rounded-4xl bg-blue-100/50 blur-2xl" />
+            <div className="absolute -inset-4 rounded-4xl bg-yellow-400/20 blur-2xl" />
             <Image
               src='/images/hospital-discussion.jpg'
               alt='Doctors discussing clinical case'
               width={600}
               height={500}
-              className='relative z-10 w-full rounded-[2.5rem] shadow-2xl object-cover aspect-4/3'
+              className='relative z-10 w-full rounded-[2.5rem] shadow-2xl object-cover aspect-4/3 border-4 border-white'
             />
-            <div className="absolute -bottom-6 -right-6 z-20 hidden md:block rounded-2xl bg-white p-6 shadow-xl border border-blue-50">
-              <p className="text-3xl font-bold text-blue-600">0%</p>
-              <p className="text-xs font-bold uppercase text-slate-500">Generic Content</p>
+            <div className="absolute -bottom-6 -right-6 z-20 hidden md:block rounded-2xl bg-slate-900 p-6 shadow-xl border-t-4 border-red-600">
+              <p className="text-3xl font-bold text-yellow-500">100%</p>
+              <p className="text-xs font-bold uppercase text-white">Medical Focus</p>
             </div>
           </motion.div>
 
           <motion.div {...fadeIn} className='space-y-6'>
-            <h2 className='text-2xl font-bold text-slate-900'>
+            <h2 className='text-3xl font-bold text-slate-900 border-l-4 border-red-600 pl-4'>
               The "Vacation Language" Trap
             </h2>
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p>
-                Standard language schools teach you how to order a <i>Currywurst</i> or book a hotel. While essential, these skills won't help you during a 3:00 AM emergency hand-over.
+                Standard language schools teach you how to order a <i>Currywurst</i>. While essential, these skills won't help you during a 3:00 AM emergency hand-over.
               </p>
-              <p className="border-l-4 border-blue-600 pl-6 italic font-medium text-slate-800">
-                "In a German ward, precision isn't just a linguistic requirement—it's a clinical safety standard."
+              <p className="font-medium text-slate-800">
+                Most institutes teach German for tourists—not for healthcare professionals. Doc2Deutsch bridges this gap.
               </p>
-              <p>
-                We integrate medical context from **Day 1 (A1)**. You don't just learn the verb "to see"; you learn how to describe clinical findings.
-              </p>
+              <div className="grid grid-cols-2 gap-4 mt-6">
+                <div className="p-4 bg-slate-50 rounded-xl border-t-2 border-slate-900">
+                  <p className="font-bold text-slate-900">What We Do</p>
+                  <p className="text-sm">A1–B2 Medical German, Anamnese, Case Discussion.</p>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-xl border-t-2 border-red-600">
+                  <p className="font-bold text-red-600">What We Don't</p>
+                  <p className="text-sm">No visa services or FSP coaching. Pure training.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
 
-        <motion.div {...fadeIn} className="mt-32 rounded-4xl bg-slate-50 p-8 lg:p-16">
+        {/* Comparison Table */}
+        <motion.div {...fadeIn} className="mt-32 rounded-4xl bg-slate-900 p-8 lg:p-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full -mr-16 -mt-16 blur-3xl" />
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900">General German vs. Doc2Deutsch</h2>
+            <h2 className="text-2xl font-bold text-white">General German vs. <span className="text-yellow-500">Doc2Deutsch</span></h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl bg-white p-8 shadow-sm border border-slate-100">
-              <h3 className="font-bold text-red-500 mb-4">General Schools</h3>
-              <ul className="space-y-3 text-slate-600 text-sm">
+            <div className="rounded-2xl bg-slate-800 p-8 border border-slate-700">
+              <h3 className="font-bold text-red-500 mb-4 uppercase tracking-widest text-xs">General Schools</h3>
+              <ul className="space-y-3 text-slate-300 text-sm">
                 <li>• Vocabulary: Hobbies, Travel, Shopping</li>
                 <li>• Context: Daily life in a city</li>
-                <li>• Goal: Passing a generic exam (Goethe/Telc)</li>
+                <li>• Goal: Generic exam success (Goethe/Telc)</li>
                 <li>• Result: Struggle to understand senior consultants</li>
               </ul>
             </div>
-            <div className="rounded-2xl bg-blue-600 p-8 shadow-lg shadow-blue-200 text-white">
-              <h3 className="font-bold text-blue-100 mb-4">Doc2Deutsch</h3>
-              <ul className="space-y-3 text-blue-50 text-sm">
-                <li>• Vocabulary: Anatomy, Pathology, Pharmacology</li>
-                <li>• Context: Ward rounds, Patient history (Anamnese)</li>
-                <li>• Goal: Clinical fluency + Exam Success</li>
-                <li>• Result: Confident integration into German teams</li>
+            <div className="rounded-2xl bg-white p-8 shadow-xl">
+              <h3 className="font-bold text-slate-900 mb-4 uppercase tracking-widest text-xs border-b border-yellow-500 pb-1 inline-block">Doc2Deutsch</h3>
+              <ul className="space-y-3 text-slate-700 text-sm">
+                <li><span className="text-red-600 font-bold">•</span> Vocabulary: Anatomy, Pathology, Pharmacology</li>
+                <li><span className="text-red-600 font-bold">•</span> Context: Ward rounds, Patient history (Anamnese)</li>
+                <li><span className="text-red-600 font-bold">•</span> Goal: Clinical fluency + Exam Success</li>
+                <li><span className="text-red-600 font-bold">•</span> Result: Confident integration into German teams</li>
               </ul>
             </div>
           </div>
         </motion.div>
 
+        {/* Approach Section */}
         <div className='mt-32 grid gap-16 lg:grid-cols-2 lg:items-center px-4'>
           <motion.div {...fadeIn} className='order-2 lg:order-1 space-y-6'>
-            <h2 className='text-2xl font-bold text-emerald-700'>
-              Native-Level Professionalism
+            <h2 className='text-3xl font-bold text-slate-900'>
+              Our Teaching Approach
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              Learning through clinical scenarios improves retention by up to 40%. By practicing dialogues that resemble real consultations, you reduce "translation lag" and develop the structured communication habits expected in Germany.
-            </p>
-            <div className="flex gap-4 items-center">
-                <div className="h-12 w-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <div className="space-y-6">
+              {[
+                { stage: "Stage 1", title: "Foundation (A1–A2)", desc: "Grammar clarity and medical pronunciation.", color: "bg-slate-900" },
+                { stage: "Stage 2", title: "Integration (B1)", desc: "Medical vocabulary introduction and role-play.", color: "bg-red-600" },
+                { stage: "Stage 3", title: "Professional (B2)", desc: "Case discussions and patient communication confidence.", color: "bg-yellow-500" }
+              ].map((step, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className={`h-12 w-12 shrink-0 rounded-lg ${step.color} flex items-center justify-center text-white font-bold text-xs`}>
+                    {step.stage}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">{step.title}</h4>
+                    <p className="text-slate-600 text-sm">{step.desc}</p>
+                  </div>
                 </div>
-                <p className="font-semibold text-slate-800">Anamnese-focused training</p>
+              ))}
             </div>
           </motion.div>
 
           <motion.div {...fadeIn} className="order-1 lg:order-2 relative">
-             <div className="absolute -inset-4 rounded-4xl bg-emerald-100/50 blur-2xl" />
             <Image
               src='/images/medical-consultation.jpg'
-              alt='Doctor explaining treatment to patient'
+              alt='Doctor explaining treatment'
               width={600}
               height={500}
               className='relative z-10 w-full rounded-[2.5rem] shadow-2xl object-cover aspect-4/3'
             />
+            <div className="absolute -inset-4 rounded-4xl bg-red-600/5 blur-2xl" />
           </motion.div>
         </div>
 
+        {/* Mission Footer */}
         <motion.div 
           {...fadeIn}
-          className='mt-32 overflow-hidden rounded-4xl bg-slate-900 text-white shadow-3xl'
+          className='mt-32 overflow-hidden rounded-4xl bg-white border-2 border-slate-900 shadow-2xl'
         >
           <div className='grid gap-0 md:grid-cols-2'>
-            <div className='p-10 lg:p-16 space-y-6 bg-linear-to-br from-blue-700 to-blue-900'>
+            <div className='p-10 lg:p-16 space-y-6 bg-slate-900 text-white'>
               <h2 className='text-3xl font-bold'>Our Mission</h2>
-              <p className="text-blue-100 text-lg leading-relaxed">
-                To equip Indian doctors with the linguistic precision needed to provide world-class healthcare in Germany. We don't just teach words; we teach professional authority.
+              <p className="text-slate-300 text-lg leading-relaxed">
+                To equip doctors with the linguistic precision needed to provide world-class healthcare in Germany. We don't just teach words; we teach professional authority.
               </p>
+              <div className="flex gap-4">
+                 <button className="bg-yellow-500 text-slate-900 px-6 py-2 rounded-full font-bold text-sm hover:bg-yellow-400 transition-colors">Book Free Demo</button>
+              </div>
             </div>
 
-            <div className='p-10 lg:p-16 space-y-6 bg-slate-800'>
-              <h2 className='text-2xl font-bold text-emerald-400'>Honest Positioning</h2>
-              <p className="text-slate-300">
-                We are language experts, not immigration agents. We focus 100% on training because we believe mastery of the tongue is the only shortcut to a successful career.
+            <div className='p-10 lg:p-16 space-y-6 bg-slate-50'>
+              <h2 className='text-2xl font-bold text-red-600 underline decoration-yellow-500 underline-offset-8'>Founder's Vision</h2>
+              <p className="text-slate-600 italic">
+                "Having experienced the confusion around language preparation, we built a platform that focuses on practical medical communication—the skill doctors truly need."
               </p>
-              <div className="rounded-xl bg-slate-700/50 p-4 border border-slate-600">
-                <p className='text-xs text-slate-400'>
-                  *Doc2Deutsch does not provide visa, licensing, or legal services. We recommend official government channels for immigration matters.
+              <div className="pt-4 border-t border-slate-200">
+                <p className="text-xs text-slate-400 font-mono italic">
+                   *Doc2Deutsch is 100% focused on training mastery. mastering the tongue is the only shortcut.
                 </p>
               </div>
             </div>
